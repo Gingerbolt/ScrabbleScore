@@ -3,6 +3,7 @@
     {
         function scrabbleDabble($input)
         {
+            $input = strtoupper($input);
             $num_arr = [];
             $letter_arr = str_split($input);
 

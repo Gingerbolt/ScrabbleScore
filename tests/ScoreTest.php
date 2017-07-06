@@ -15,6 +15,20 @@
             //Assert
             $this->assertEquals(5, $result);
         }
+
+        function testScrabbleDabbleCaseAgnostic()
+        {
+            //Arrange
+            $test_score = new Score;
+            $input = 'k';
+
+            //Act
+            $result = $test_score->scrabbleDabble($input);
+
+            //Assert
+            $this->assertEquals(5, $result);
+
+        }
     }
 
 ?>
