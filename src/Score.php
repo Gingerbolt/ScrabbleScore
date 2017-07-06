@@ -1,14 +1,25 @@
 <?php
     class Score
     {
+        function validate($input) {
+            if (ctype_alpha($input) == false) {
+                return false;
+            } elseif (empty($input)) {
+                return false;
+            } else {
+                return true;
+            }
+        }
+
         function scrabbleDabble($input)
         {
+            $validate = $this->validate($input);
             $input = strtoupper($input);
             $num_arr = [];
             $letter_arr = str_split($input);
 
-            if (strpos($input, " ") !== false) {
-                $output = "Scrabble does not accept multiple-word entries.";
+            if ($validate == false) {
+                $output = "Scrabble only accepts single-word entries that only contain alphabetical characters.";
                 return $output;
             } else {
                 foreach ($letter_arr as $letter) {

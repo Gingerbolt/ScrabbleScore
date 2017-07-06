@@ -46,13 +46,27 @@
         {
             //Arrange
             $test_score = new Score;
-            $input = 'C0me b@ck to me, Sheila!';
+            $input = 'Come back to me, Sheila';
 
             //Act
             $result = $test_score->scrabbleDabble($input);
 
             //Assert
-            $this->assertEquals("Scrabble does not accept multiple-word entries.", $result);
+            $this->assertEquals("Scrabble only accepts single-word entries that only contain alphabetical characters.", $result);
+        }
+
+        function testScrabbleDabbleNonAlpha()
+        {
+            //Arrange
+            $test_score = new Score;
+            $input = 'C0me b@ck to^me, Sheila!';
+
+            //Act
+            $result = $test_score->scrabbleDabble($input);
+
+            //Assert
+            $this->assertEquals("Scrabble only accepts single-word entries that only contain alphabetical characters.", $result);
+
         }
     }
 
