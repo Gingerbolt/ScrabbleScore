@@ -3,10 +3,8 @@
     {
         function validate($input) {
             $validate = false;
-            if (!(empty($input))) {
-                if (ctype_alpha($input) == true) {
-                    $validate = true;
-                }
+            if (ctype_alpha($input) == true) {
+              $validate = true;
             }
             return $validate;
         }
