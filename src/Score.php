@@ -19,7 +19,7 @@
             $letter_arr = str_split($input);
 
             if ($validate == false) {
-                $output = "Scrabble only accepts single-word entries that only contain alphabetical characters.";
+                $output = 'Scrabble only accepts single-word entries that only contain alphabetical characters.';
                 return $output;
             } else {
                 foreach ($letter_arr as $letter) {

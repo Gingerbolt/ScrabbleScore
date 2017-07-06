@@ -1,8 +1,8 @@
 <?php
-    require_once "src/Score.php";
+    require_once 'src/Score.php';
 
-    class ScoreTest extends PHPUnit_Framework_TestCase{
-
+    class ScoreTest extends PHPUnit_Framework_TestCase
+    {
         function testScrabbleDabbleOneLetter()
         {
             //Arrange
@@ -52,7 +52,7 @@
             $result = $test_score->scrabbleDabble($input);
 
             //Assert
-            $this->assertEquals("Scrabble only accepts single-word entries that only contain alphabetical characters.", $result);
+            $this->assertEquals('Scrabble only accepts single-word entries that only contain alphabetical characters.', $result);
         }
 
         function testScrabbleDabbleNonAlpha()
@@ -65,7 +65,7 @@
             $result = $test_score->scrabbleDabble($input);
 
             //Assert
-            $this->assertEquals("Scrabble only accepts single-word entries that only contain alphabetical characters.", $result);
+            $this->assertEquals('Scrabble only accepts single-word entries that only contain alphabetical characters.', $result);
 
         }
     }
