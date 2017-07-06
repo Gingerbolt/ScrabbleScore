@@ -27,7 +27,19 @@
 
             //Assert
             $this->assertEquals(5, $result);
+        }
 
+        function testScrabbleDabblemultiLetter()
+        {
+            //Arrange
+            $test_score = new Score;
+            $input = 'WooD';
+
+            //Act
+            $result = $test_score->scrabbleDabble($input);
+
+            //Assert
+            $this->assertEquals(8, $result);
         }
     }
 
