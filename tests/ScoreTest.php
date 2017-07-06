@@ -46,7 +46,7 @@
         {
             //Arrange
             $test_score = new Score;
-            $input = 'Come back to me, Sheila';
+            $input = 'Come back to me';
 
             //Act
             $result = $test_score->scrabbleDabble($input);
