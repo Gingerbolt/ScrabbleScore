@@ -41,6 +41,19 @@
             //Assert
             $this->assertEquals(8, $result);
         }
+
+        function testScrabbleDabbleMultiWord()
+        {
+            //Arrange
+            $test_score = new Score;
+            $input = 'C0me b@ck to me, Sheila!';
+
+            //Act
+            $result = $test_score->scrabbleDabble($input);
+
+            //Assert
+            $this->assertEquals("Scrabble does not accept multiple-word entries.", $result);
+        }
     }
 
 ?>
