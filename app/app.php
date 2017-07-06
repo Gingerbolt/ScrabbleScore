@@ -10,7 +10,11 @@
     $app->get("/", function() use ($app) {
     return $app["twig"]->render("landing.html.twig");
     });
-
+    $app->post("/update", function() use ($app) {
+      $current_score = new Score();
+      $result = $current_score->scrabbleDabble($_POST["word"]);
+      return $app["twig"]->render("update.html.twig", array("Scrabblescore" => $result));
+    });
 
 return $app;
 ?>
