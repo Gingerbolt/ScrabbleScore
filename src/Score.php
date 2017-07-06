@@ -2,13 +2,13 @@
     class Score
     {
         function validate($input) {
-            if (ctype_alpha($input) == false) {
-                return false;
-            } elseif (empty($input)) {
-                return false;
-            } else {
-                return true;
+            $validate = false;
+            if (!(empty($input))) {
+                if (ctype_alpha($input) == true) {
+                    $validate = true;
+                }
             }
+            return $validate;
         }
 
         function scrabbleDabble($input)
